@@ -18,5 +18,5 @@
     <string name="password_error">Please enter a password</string>
     <string name="error_invalid_password">Please enter a minimum password of 6 characters</string>
     <string name="forgotPassword">Forgot Password?</string>
-
+    <string name="web_client_id">775165624928-e329qabefm3qusa8q2thrsa1avinbp5r.apps.googleusercontent.com</string>
 </resources>

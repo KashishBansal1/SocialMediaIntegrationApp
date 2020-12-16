@@ -104,7 +104,7 @@ public class Profile extends Activity {
                     public void onClick(DialogInterface dialog, int id) {
                         mAuth.signOut();
                         Intent i = new Intent(getApplicationContext(),
-                                LoginActivity.class);
+                                MainActivity.class);
                         startActivity(i);
                     }
                 });

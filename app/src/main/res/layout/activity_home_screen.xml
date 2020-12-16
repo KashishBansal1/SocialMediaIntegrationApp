@@ -32,7 +32,6 @@
         android:text="@string/enterProfile"
         android:layout_marginTop="80dp"
         android:layout_gravity="center"
-        android:background="@drawable/bg_btn"
         android:gravity="center"
         android:textColor="@android:color/holo_blue_dark"/>
 

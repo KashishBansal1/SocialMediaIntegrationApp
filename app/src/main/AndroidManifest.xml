@@ -16,6 +16,7 @@
         android:theme="@style/Theme.SocialMediaIntegrationApp">
         <activity android:name="ca.bcit.socialmediaintegrationapp.ResetPassword" />
         <activity android:name="ca.bcit.socialmediaintegrationapp.Profile" />
+        <activity android:name="ca.bcit.socialmediaintegrationapp.GoogleSigninActivity" />
         <activity
             android:name="ca.bcit.socialmediaintegrationapp.HomeScreen"
             android:label="@string/app_name">
@@ -27,6 +28,13 @@
         </activity>
 
         <activity android:name="ca.bcit.socialmediaintegrationapp.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ca.bcit.socialmediaintegrationapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
