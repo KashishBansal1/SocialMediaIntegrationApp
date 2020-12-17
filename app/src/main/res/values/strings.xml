@@ -18,5 +18,7 @@
     <string name="password_error">Please enter a password</string>
     <string name="error_invalid_password">Please enter a minimum password of 6 characters</string>
     <string name="forgotPassword">Forgot Password?</string>
-    <string name="web_client_id">775165624928-e329qabefm3qusa8q2thrsa1avinbp5r.apps.googleusercontent.com</string>
+    <string name="web_client_id">419738267674-eegsut1t6bsokteo9ivpo914iq0r9egc.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">1148855175530798</string>
+    <string name="fb_login_protocol_scheme">fb[1148855175530798]</string>
 </resources>

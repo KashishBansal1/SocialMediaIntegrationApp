@@ -14,9 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SocialMediaIntegrationApp">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:label="@string/app_name" />
+<!--            android:configChanges="keyboard|keyboardHidden-->
+<!--                          |screenLayout|screenSize-->
+<!--                          |orientation"-->
+
+        <activity android:name="ca.bcit.socialmediaintegrationapp.FacebookActivity" />
         <activity android:name="ca.bcit.socialmediaintegrationapp.ResetPassword" />
         <activity android:name="ca.bcit.socialmediaintegrationapp.Profile" />
-        <activity android:name="ca.bcit.socialmediaintegrationapp.GoogleSigninActivity" />
+        <activity android:name="ca.bcit.socialmediaintegrationapp.GoogleActivity" />
+        <activity android:name="ca.bcit.socialmediaintegrationapp.GoogleProfile" />
         <activity
             android:name="ca.bcit.socialmediaintegrationapp.HomeScreen"
             android:label="@string/app_name">

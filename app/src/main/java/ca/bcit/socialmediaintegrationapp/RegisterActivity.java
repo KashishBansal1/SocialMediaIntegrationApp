@@ -1,25 +1,20 @@
 package ca.bcit.socialmediaintegrationapp;
 
-
 import android.content.Intent;
-import android.text.TextUtils;
+import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
-
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidcoding.abhi.simple_login.R;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -54,16 +49,9 @@ public class RegisterActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         // When the user clicks the register button
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                registerUser();
-
-            }
-        });
+        register.setOnClickListener(v -> registerUser());
 
         databaseDetails = FirebaseDatabase.getInstance().getReference("Users");
-
 
         login.setOnClickListener(v -> {
             // redirect to LoginActivity
@@ -122,12 +110,10 @@ public class RegisterActivity extends AppCompatActivity {
         // We want to return false if an error has occurred.
         // Toast a message to the user saying what they've done incorrectly
 
-
         // Check for a valid name.
         if (name.getText().toString().isEmpty()) {
             Toast.makeText(getApplicationContext(), "You must enter a name", Toast.LENGTH_SHORT).show();
             return false;
-//            isNameValid = false;
         } else {
             isNameValid = true;
         }

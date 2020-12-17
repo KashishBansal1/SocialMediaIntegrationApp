@@ -1,13 +1,7 @@
 package ca.bcit.socialmediaintegrationapp;
 
-import java.util.ArrayList;
-
 public class RegistrationDetails {
-    String userID;
-    String name;
-    String email;
-    String phoneNumber;
-    String level, currentExp;
+    String userID, name, email, phoneNumber;
 
     public RegistrationDetails() {
     }
@@ -17,7 +11,6 @@ public class RegistrationDetails {
         this.email = email;
         this.name = name;
         this.phoneNumber = phoneNumber;
-
     }
 
     public String getUserID() {

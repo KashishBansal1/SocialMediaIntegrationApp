@@ -2,16 +2,11 @@ package ca.bcit.socialmediaintegrationapp;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.androidcoding.abhi.simple_login.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,7 +24,6 @@ public class Profile extends Activity {
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase, userRef;
     private static final String USERS = "Users";
-    private FirebaseDatabase database;
     private final String TAG = this.getClass().getName().toUpperCase();
 
     @Override
@@ -51,13 +45,7 @@ public class Profile extends Activity {
         mAuth = FirebaseAuth.getInstance();
 
         /** logging out a user */
-        String string = intent.getStringExtra("message");
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logoutConfirmation();
-            }
-        });
+        logout.setOnClickListener(v -> logoutConfirmation());
     }
 
     public void onStart() {
@@ -100,20 +88,14 @@ public class Profile extends Activity {
         builder.setTitle("Confirmation PopUp!").
                 setMessage("Going back will return you to the login page.\n\nAre you sure that you want to logout?");
         builder.setPositiveButton("Yes",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        mAuth.signOut();
-                        Intent i = new Intent(getApplicationContext(),
-                                MainActivity.class);
-                        startActivity(i);
-                    }
+                (dialog, id) -> {
+                    mAuth.signOut();
+                    Intent i = new Intent(getApplicationContext(),
+                            MainActivity.class);
+                    startActivity(i);
                 });
         builder.setNegativeButton("No",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
+                (dialog, id) -> dialog.cancel());
         AlertDialog alert11 = builder.create();
         alert11.show();
     }

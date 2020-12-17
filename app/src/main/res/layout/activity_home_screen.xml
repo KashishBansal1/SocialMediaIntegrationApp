@@ -8,7 +8,9 @@
         android:id="@+id/textwelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="welcome"
+        android:text="welcome!"
+        android:textStyle="bold"
+        android:textColor="@color/pink"
         android:layout_marginTop="80dp"
         android:layout_gravity="center"
         android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -18,7 +20,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcomeMessage"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="0dp"
+        android:textStyle="bold"
+        android:textColor="@color/pink"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:gravity="center"
@@ -33,6 +37,7 @@
         android:layout_marginTop="80dp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textColor="@android:color/holo_blue_dark"/>
+        android:backgroundTint="@color/white"
+        android:textColor="@android:color/black"/>
 
 </LinearLayout>
