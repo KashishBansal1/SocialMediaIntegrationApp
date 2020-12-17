@@ -81,8 +81,8 @@ public class GoogleActivity extends AppCompatActivity implements GoogleApiClient
 
     //updates the UI for user
     private void updateUI(FirebaseUser user) {
-        Toast.makeText(getApplicationContext(), "UpdateUI called", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(getApplicationContext(), Profile.class);
+//        Toast.makeText(getApplicationContext(), "UpdateUI called", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getApplicationContext(), NewProfile.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         intent.putExtra("email", email);
         startActivity(intent);

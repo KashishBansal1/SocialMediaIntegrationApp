@@ -22,7 +22,7 @@ public class Profile extends Activity {
     TextView logout, name, email, phone;
     private String Email, fullname, phoneno, userID;
     private FirebaseAuth mAuth;
-    private DatabaseReference mDatabase, userRef;
+    private DatabaseReference userRef;
     private static final String USERS = "Users";
     private final String TAG = this.getClass().getName().toUpperCase();
 

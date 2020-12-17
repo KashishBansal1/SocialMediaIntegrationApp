@@ -84,7 +84,7 @@ public class FacebookActivity extends AppCompatActivity {
 
                                     disconnectFromFacebook();
 
-                                    Intent intent = new Intent(getApplicationContext(), Profile.class);
+                                    Intent intent = new Intent(getApplicationContext(), NewProfile.class);
                                     intent.putExtra("email", email);
                                     startActivity(intent);
                                 } catch (JSONException | NullPointerException e) {
